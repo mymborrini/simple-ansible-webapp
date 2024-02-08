@@ -45,23 +45,14 @@ This is used in the demonstration of development of Ansible Playbooks.
         
         mysql> INSERT INTO employees VALUES ('JOHN');
     
-## 4. Install and Configure Web Server
 
-Install Python Flask dependency
-
-    pip install flask
-    pip install flask-mysql
-
-- Copy app.py or download it from source repository
-- Configure database credentials and parameters 
-
-## 5. Start Web Server
+## 4. Start Web Server
 
 Start web server
 
     FLASK_APP=app.py flask run --host=0.0.0.0
     
-## 6. Test
+## 5. Test
 
 Open a browser and go to URL
 

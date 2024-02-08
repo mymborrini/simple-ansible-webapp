@@ -15,14 +15,18 @@ This is used in the demonstration of development of Ansible Playbooks.
   
   Python and its dependencies
 
-    apt-get install -y python python-setuptools python-dev build-essential python-pip python-mysqldb
+    sudo apt install -y python3-venv
+    python3 -m venv .venv
+    . .vevn/bin/activate
+    pip install -r requirements.txt
+
 
    
 ## 2. Install and Configure Database
     
  Install MySQL database
     
-    apt-get install -y mysql-server mysql-client
+    apt install -y mysql-server mysql-client
 
 ## 3. Start Database Service
   - Start the database service
@@ -31,10 +35,9 @@ This is used in the demonstration of development of Ansible Playbooks.
 
   - Create database and database users
         
-        # mysql -u <username> -p
+        # mysql -u root -p
         
         mysql> CREATE DATABASE employee_db;
-        mysql> GRANT ALL ON *.* to db_user@'%' IDENTIFIED BY 'Passw0rd';
         mysql> USE employee_db;
         mysql> CREATE TABLE employees (name VARCHAR(20));
         
